@@ -1,0 +1,14 @@
+<h2>movie list item !</h2>
+<ng-container *ngIf="movie">
+  <img class="ui tiny image"
+       *ngIf="movie.thumbnails && movie.thumbnails[0] && movie.thumbnails[0].url" [src]="movie.thumbnails[0].url" title="{{movie.thumbnails[0].title}}">
+  <div class="content">
+    <div class="header">
+      <span class="name">{{movie.name}}</span>
+      <span class="number">{{movie.itemNumber}}</span>
+      <span class="category">{{movie.category}}</span>
+    </div>
+    <div class="description">{{movie.description}}</div>
+    <!-- <swe-tool-details >(click)="showToolList(tool)"</swe-tool-details>-->
+  </div>
+</ng-container>

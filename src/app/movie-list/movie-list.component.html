@@ -1,0 +1,13 @@
+<h1>Movies list </h1>
+<div *ngFor="let movie of movies">
+  {{ movie.name }}
+</div>
+<div>
+<yh-movie-list-item class="item"
+               *ngFor="let movie of movies"
+               [movie]="movie"
+               [routerLink]="movie.itemNumber"></yh-movie-list-item>
+</div>
+<!-- property binding-->
+<!-- router link create the rout to the details ,it creates to the whole component a link
+and this component is clickable-->
